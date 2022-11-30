@@ -25,8 +25,8 @@ module.exports = {
     "no-console": "error",
     "import/prefer-default-export": "off",
     "react/react-in-jsx-scope": "off",
-    "semi": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    semi: "off",
+    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
   },
   overrides: [
     {
@@ -42,4 +42,7 @@ module.exports = {
       ],
     },
   ],
-};
+  parserOptions: {
+    ecmaVersion: 2020,
+  },
+}

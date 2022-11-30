@@ -1,56 +1,55 @@
 const path = require("path")
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require("clean-webpack-plugin")
+const webpack = require("webpack")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 const childProcess = require("child_process")
 
 module.exports = {
-  entry: ['./src/index.js'],
+  entry: ["./src/index.js"],
   module: {
     rules: [
       {
         test: /\.(js|mjs|jsx)$/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         options: {
-          configFile: path.resolve(__dirname,"../babel/babel.config.js"),
-        }
+          configFile: path.resolve(__dirname, "../babel/babel.config.js"),
+        },
       },
       {
         test: /\.(ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader',
+        loader: "file-loader",
         options: {
-          name: '[name].[ext]',
+          name: "[name].[ext]",
         },
       },
       {
         test: /\.png$/,
-        loader: 'url-loader',
+        loader: "url-loader",
         options: {
-          publicPath: './dist/',
-          name: '[name].[ext]?[hash]',
-          limit: 5000
-        }
-      }
-    ]
+          publicPath: "./dist/",
+          name: "[name].[ext]?[hash]",
+          limit: 5000,
+        },
+      },
+    ],
   },
 
-  infrastructureLogging: { level: 'error'},
+  infrastructureLogging: { level: "error" },
 
-  stats: 'minimal',
+  stats: "minimal",
 
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: [".js", ".jsx"],
     alias: {
-      '@src': path.resolve(__dirname, "src/"),
-    }
+      "@src": path.resolve(__dirname, "src/"),
+    },
   },
 
   plugins: [
     // new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'public/index.html',
+      filename: "index.html",
+      template: "public/index.html",
     }),
     new webpack.BannerPlugin({
       banner: `
@@ -58,10 +57,9 @@ module.exports = {
         Commit Version :: ${childProcess.execSync("git rev-parse --short HEAD")}
         Auth.name :: ${childProcess.execSync("git config user.name")}
         Auth.email :: ${childProcess.execSync("git config user.email")}
-      `
+      `,
     }),
-    new CleanWebpackPlugin(),
   ],
 
-  devtool: 'eval-cheap-source-map',
+  devtool: "eval-cheap-source-map",
 }
