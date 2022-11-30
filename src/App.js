@@ -6,8 +6,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          테스트 왜안하냐고~~~~~~~~~~~
         </p>
+
+        
         <p>정현우의 React Boilerplate</p>
       </header>
     </div>
