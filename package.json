@@ -16,7 +16,15 @@
     "css-minimizer-webpack-plugin": "^4.2.2",
     "dotenv": "^16.0.3",
     "dotenv-webpack": "^8.0.1",
+    "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.1.6",
+    "eslint-plugin-jest-dom": "^4.0.3",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-testing-library": "^5.9.1",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.2",
     "lint-staged": "^13.0.4",
@@ -36,7 +44,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "eslint --cache --fix"
+      "eslint --fix"
     ]
   }
 }
