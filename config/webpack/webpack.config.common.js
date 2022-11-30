@@ -10,7 +10,10 @@ module.exports = {
     rules: [
       {
         test: /\.(js|mjs|jsx)$/,
-        use: ['babel-loader'],
+        loader: 'babel-loader',
+        options: {
+          configFile: path.resolve(__dirname,"../babel/babel.config.js"),
+        }
       },
       {
         test: /\.(ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -39,7 +42,7 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'public/index.html',
@@ -55,5 +58,5 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
 
-  devtool: 'cheap-eval-source-map',
+  devtool: 'eval-cheap-source-map',
 }

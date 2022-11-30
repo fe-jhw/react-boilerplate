@@ -1,7 +1,9 @@
 const path = require("path")
 const { merge } = require('webpack-merge')
 const common = require('./webpack.config.common.js')
+
 const Dotenv = require('dotenv-webpack')
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 
 module.exports = merge(common, {
   mode: 'development',
@@ -17,16 +19,14 @@ module.exports = merge(common, {
 
   devServer: {
     historyApiFallback: true,
-    overlay: true,
-    inline: true,
     port: 3000,
     hot: true,
-    publicPath: '/',
   },
 
   plugins: [
     new Dotenv({
       path: path.resolve(__dirname, "./.env.dev"),
     }),
+    new ReactRefreshWebpackPlugin(),
   ]
 })
