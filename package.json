@@ -12,10 +12,14 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "babel-loader": "^9.1.0",
     "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
     "dotenv": "^16.0.3",
     "dotenv-webpack": "^8.0.1",
+    "eslint-config-prettier": "^8.5.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
     "mini-css-extract-plugin": "^2.7.0",
     "react-refresh": "^0.14.0",
     "webpack": "^5.75.0",
@@ -25,7 +29,14 @@
     "webpack-merge": "^5.8.0"
   },
   "scripts": {
-    "dev": "webpack server --config ./config/webpack/webpack.config.dev.js --progress --open",
-    "build": "webpack --config ./config/webpack/webpack.config.prod.js --progress"
+    "dev": "cross-env NODE_ENV=development webpack server --config ./config/webpack/webpack.config.dev.js --open",
+    "build": "cross-env NODE_ENV=production webpack --config ./config/webpack/webpack.config.prod.js",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*./src/**/*.{js,jsx}": [
+      "eslint --cache --fix"
+    ]
   }
 }

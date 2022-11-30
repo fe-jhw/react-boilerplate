@@ -2,6 +2,7 @@ const path = require("path")
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
+
 const childProcess = require("child_process")
 
 module.exports = {
@@ -34,10 +35,14 @@ module.exports = {
     ]
   },
 
+  infrastructureLogging: { level: 'error'},
+
+  stats: 'minimal',
+
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
-      '@': path.resolve(__dirname, "src/"),
+      '@src': path.resolve(__dirname, "src/"),
     }
   },
 

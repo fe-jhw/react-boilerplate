@@ -22,14 +22,14 @@ module.exports = merge(common, {
 
     output: {
         filename: 'static/js/[name].[contenthash:8].js',
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "../../dist"),
         publicPath: './',
         chunkFilename: 'static/js/[name].[contenthash:8].chunk.js',
     },
 
     plugins: [
         new Dotenv({
-            path: path.resolve(__dirname, "./.env.prod"),
+            path: path.resolve(__dirname, "../.prod.env"),
         }),
         new MiniCssExtractPlugin({ filename: "[name].css" }),
         new BundleAnalyzerPlugin({
