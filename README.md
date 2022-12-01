@@ -34,6 +34,7 @@
 
 ## 앞으로 추가될 것들
 
+- `CRA`처럼 `npx fe-jhw-react-boilerplate`로 실행되게 하기
 - Typescript 관련 설정
 - TDD 관련 설정
 - 빌드시 최적화
