@@ -10,6 +10,10 @@
 - bundle-analyze: `webpack-bundle-analyzer`를 활용해 빌드시 번들 분석 정보를 확인할 수 있습니다.
 - lint-automation: 깃 훅을 사용하여 커밋 이전 자동으로 lint를 실행해 코드 품질을 향상시킵니다.
 
+## 시작하기
+
+리포지토리를 클론한 후 src폴더에 리액트 코드를 작성해주세요.
+
 ## 사용가능 스크립트
 
 ### `yarn dev`
