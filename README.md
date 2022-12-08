@@ -12,7 +12,9 @@
 
 ## 시작하기
 
-리포지토리를 클론한 후 src폴더에 리액트 코드를 작성해주세요.
+1. `npx fe-jhw-create-react-app [project name]`
+2. `git init`
+3. `git commit --allow-empty -m "[FIRST COMMIT]"`
 
 ## 사용가능 스크립트
 
@@ -42,3 +44,4 @@
 ## 버그
 
 - `yarn dev`로 개발서버 실행중에 `emotion` 설치시 `can't resolve module` 에러 발생, 개발서버 재실행시 에러 해결
+- `npx fe-jhw-create-react-app` 후 `git hook`사용 떄문에 `git init`, `commit` 작업을 추가로 해야함, git hook 관련 설정 제거 예정

@@ -1,6 +1,11 @@
 {
-  "name": "react-boilerplate",
+  "name": "fe-jhw-react-boilerplate",
+  "version": "1.0.0",
+  "description": "react-boilerplate with webpack, babel, jest, lint",
+  "main": "./src/index.js",
   "packageManager": "yarn@3.3.0",
+  "author": "fe-jhw",
+  "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
