@@ -38,3 +38,7 @@
 - Typescript 관련 설정
 - TDD 관련 설정
 - 빌드시 최적화
+
+## 버그
+
+- `yarn dev`로 개발서버 실행중에 `emotion` 설치시 `can't resolve module` 에러 발생, 개발서버 재실행시 에러 해결
