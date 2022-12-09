@@ -51,14 +51,14 @@ module.exports = {
       filename: "index.html",
       template: "public/index.html",
     }),
-    new webpack.BannerPlugin({
-      banner: `
-        Build Date :: ${new Date().toLocaleString()}
-        Commit Version :: ${childProcess.execSync("git rev-parse --short HEAD")}
-        Auth.name :: ${childProcess.execSync("git config user.name")}
-        Auth.email :: ${childProcess.execSync("git config user.email")}
-      `,
-    }),
+    // new webpack.BannerPlugin({
+    //   banner: `
+    //     Build Date :: ${new Date().toLocaleString()}
+    //     Commit Version :: ${childProcess.execSync("git rev-parse --short HEAD")}
+    //     Auth.name :: ${childProcess.execSync("git config user.name")}
+    //     Auth.email :: ${childProcess.execSync("git config user.email")}
+    //   `,
+    // }),
   ],
 
   devtool: "eval-cheap-source-map",
