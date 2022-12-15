@@ -31,7 +31,7 @@ module.exports = merge(common, {
 
   plugins: [
     new Dotenv({
-      path: path.resolve(__dirname, "../../.prod.env"),
+      path: path.resolve(__dirname, "../env/.prod.env"),
     }),
     new MiniCssExtractPlugin({ filename: "[name].css" }),
     new BundleAnalyzerPlugin({
