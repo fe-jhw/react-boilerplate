@@ -1,4 +1,5 @@
 module.exports = {
+  parser: "@typescript-eslint/parser",
   root: true,
   env: {
     browser: true,
@@ -14,11 +15,25 @@ module.exports = {
     "plugin:import/recommended",
     "plugin:testing-library/react",
     "prettier",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
   ],
-  plugins: ["react", "react-hooks", "jsx-a11y", "import"],
+  plugins: [
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "import",
+    "@typescript-eslint",
+    "prettier",
+  ],
   settings: {
     react: {
       version: "detect",
+    },
+    "import/resolver": {
+      node: {
+        extensions: [".ts", ".tsx"],
+      },
     },
   },
   rules: {

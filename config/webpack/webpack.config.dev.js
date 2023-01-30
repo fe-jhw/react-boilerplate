@@ -19,14 +19,14 @@ module.exports = merge(common, {
 
   devServer: {
     historyApiFallback: true,
-    port: 3000,
+    port: 30009,
     hot: true,
     // noInfo: true,
   },
 
   plugins: [
     new Dotenv({
-      path: path.resolve(__dirname, "../../.dev.env"),
+      path: path.resolve(__dirname, "../env/.dev.env"),
     }),
     new ReactRefreshWebpackPlugin(),
   ],

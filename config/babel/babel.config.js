@@ -13,6 +13,7 @@ const presets = [
       runtime: "automatic",
     },
   ],
+  "@babel/preset-typescript",
 ]
 
 const plugins = []

@@ -5,11 +5,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const childProcess = require("child_process")
 
 module.exports = {
-  entry: ["./src/index.js"],
+  entry: ["./src/index.tsx"],
   module: {
     rules: [
       {
-        test: /\.(js|mjs|jsx)$/,
+        test: /\.(js|mjs|jsx|ts|tsx)$/,
         loader: "babel-loader",
         options: {
           configFile: path.resolve(__dirname, "../babel/babel.config.js"),
@@ -39,7 +39,7 @@ module.exports = {
   stats: "minimal",
 
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
     alias: {
       "@src": path.resolve(__dirname, "src/"),
     },
@@ -61,5 +61,5 @@ module.exports = {
     // }),
   ],
 
-  devtool: "eval-cheap-source-map",
+  devtool: "inline-source-map",
 }

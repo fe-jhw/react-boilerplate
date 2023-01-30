@@ -34,11 +34,12 @@
 
 ## 앞으로 추가될 것들
 
-- `CRA`처럼 `npx fe-jhw-react-boilerplate`로 실행되게 하기
-- Typescript 관련 설정
+- Typescript 결함 해결 + (린트, JEST TS 설정 및 테스트)
 - TDD 관련 설정
 - 빌드시 최적화
+- 초기 `git init`후 `pre-commit`훅 실행시키기
 
 ## 버그
 
-- `yarn dev`로 개발서버 실행중에 `emotion` 설치시 `can't resolve module` 에러 발생, 개발서버 재실행시 에러 해결
+- `webpack devserver`시 타입 오류를 무시함
+- 에디터상에서 `Typescript`관련 오류 많이 발생, 빌드시에는 문제X
