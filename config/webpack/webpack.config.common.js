@@ -1,6 +1,7 @@
 const path = require("path")
 const webpack = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin")
 
 const childProcess = require("child_process")
 
@@ -51,6 +52,7 @@ module.exports = {
       filename: "index.html",
       template: "public/index.html",
     }),
+    new ForkTsCheckerWebpackPlugin(),
     // new webpack.BannerPlugin({
     //   banner: `
     //     Build Date :: ${new Date().toLocaleString()}

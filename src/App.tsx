@@ -1,9 +1,4 @@
 function App() {
-  const a = (param: number | string) => {
-    console.log(param)
-  }
-
-  a({ a: 1 })
   return (
     <div className="App">
       <header className="App-header">

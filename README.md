@@ -1,6 +1,6 @@
 # fe-jhw-react-boilerplate
 
-> 리액트 개발에 필요한 Webpack, Babel, Jest, Lint, Prettier, 환경변수, MSW 설정이 되어있는 boilerplate 입니다.
+> 리액트 개발에 필요한 Webpack, Babel, Jest, Lint, Prettier, 환경변수, MSW, TypeScript 설정이 되어있는 boilerplate 입니다.
 
 ## 특징
 
@@ -34,12 +34,9 @@
 
 ## 앞으로 추가될 것들
 
-- Typescript 결함 해결 + (린트, JEST TS 설정 및 테스트)
+- 린트, JEST TS 설정 및 테스트
 - TDD 관련 설정
 - 빌드시 최적화
 - 초기 `git init`후 `pre-commit`훅 실행시키기
 
 ## 버그
-
-- `webpack devserver`시 타입 오류를 무시함
-- 에디터상에서 `Typescript`관련 오류 많이 발생, 빌드시에는 문제X
