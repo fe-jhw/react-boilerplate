@@ -2459,7 +2459,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.49.0":
+"@typescript-eslint/eslint-plugin@npm:^5.50.0":
   version: 5.50.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.50.0"
   dependencies:
@@ -2483,7 +2483,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.49.0":
+"@typescript-eslint/parser@npm:^5.50.0":
   version: 5.50.0
   resolution: "@typescript-eslint/parser@npm:5.50.0"
   dependencies:
@@ -5452,8 +5452,8 @@ __metadata:
     "@types/react": ^18.0.27
     "@types/react-dom": ^18.0.10
     "@types/testing-library__jest-dom": ^5.14.5
-    "@typescript-eslint/eslint-plugin": ^5.49.0
-    "@typescript-eslint/parser": ^5.49.0
+    "@typescript-eslint/eslint-plugin": ^5.50.0
+    "@typescript-eslint/parser": ^5.50.0
     babel-jest: ^29.3.1
     babel-loader: ^9.1.0
     clean-webpack-plugin: ^4.0.0
@@ -5481,6 +5481,7 @@ __metadata:
     lint-staged: ^13.0.4
     mini-css-extract-plugin: ^2.7.0
     msw: ^0.49.1
+    prettier: ^2.8.3
     react: ^18.2.0
     react-dom: ^18.2.0
     react-refresh: ^0.14.0
@@ -9184,6 +9185,15 @@ __metadata:
   dependencies:
     fast-diff: ^1.1.2
   checksum: 00ce8011cf6430158d27f9c92cfea0a7699405633f7f1d4a45f07e21bf78e99895911cbcdc3853db3a824201a7c745bd49bfea8abd5fb9883e765a90f74f8392
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.8.3":
+  version: 2.8.3
+  resolution: "prettier@npm:2.8.3"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 92f2ceb522d454370e02082aa74ad27388672f7cee8975028b59517c069fe643bdc73e322675c8faf2ff173d7a626d1a6389f26b474000308e793aa25fff46e5
   languageName: node
   linkType: hard
 
