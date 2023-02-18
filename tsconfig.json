@@ -25,6 +25,11 @@
 
     // Modules Configuration
     "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
     "module": "esnext",
     "moduleResolution": "node",
 
