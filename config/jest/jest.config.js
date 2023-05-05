@@ -32,4 +32,7 @@ module.exports = {
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': 'ts-jest',
   },
+  moduleNameMapper: {
+    '@/(.*)': '<rootDir>/src/$1',
+  },
 }
