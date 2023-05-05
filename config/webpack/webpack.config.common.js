@@ -39,6 +39,14 @@ module.exports = {
 
   stats: 'minimal',
 
+  cache: {
+    type: 'filesystem',
+
+    buildDependencies: {
+      config: [__filename],
+    },
+  },
+
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
