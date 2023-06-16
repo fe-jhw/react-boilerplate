@@ -23,13 +23,10 @@ module.exports = {
     'plugin:jest-dom/recommended',
   ],
   plugins: ['@typescript-eslint', 'import', 'prettier', 'react', 'react-hooks', 'testing-library', 'jest-dom'],
-  overrides: [{
-    files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
-    extends: ['plugin:testing-library/react'],
-  }],
   settings: { react: { version: 'detect' } },
 
   rules: {
+    'react/no-unknown-property': ['error', { ignore: ['css'] }],
     'prettier/prettier': ['error', { endOfLine: 'auto', semi: false }],
     'no-implicit-coercion': 'error',
 
