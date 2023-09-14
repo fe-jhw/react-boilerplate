@@ -17,7 +17,7 @@ jobs:
 
       - name: Install packages
         run: |
-          yarn ci
+          yarn install
 
       - name: Build
         run: |
