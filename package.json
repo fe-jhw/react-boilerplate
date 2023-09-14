@@ -71,8 +71,9 @@
     "webpack-merge": "^5.9.0"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack server --config ./config/webpack/webpack.config.dev.js --open",
-    "build": "cross-env NODE_ENV=production webpack --config ./config/webpack/webpack.config.prod.js",
+    "dev": "webpack server --config ./config/webpack/webpack.config.dev.js --open",
+    "dev:msw": "cross-env USE_MSW=true webpack server --config ./config/webpack/webpack.config.dev.js --open",
+    "build": "webpack --config ./config/webpack/webpack.config.prod.js",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
     "lint": "eslint './src/**/*.{ts,tsx,js,jsx}'",
