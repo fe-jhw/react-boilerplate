@@ -4,6 +4,8 @@
 # push 이벤트가 발생했을 때, deploy로 시작하는 이름을 가진 브랜치만 실행된다는 말입니다.
 # 아래처럼 사용할 수도 있고, 특정 브랜치를 ignore할 수도 있어요.
 # 다른 방법을 보고싶으시다면 참고 링크의 `Events that trigger workflows`를 확인해주세요!
+name: deploy
+
 on:
   push:
     branches:
