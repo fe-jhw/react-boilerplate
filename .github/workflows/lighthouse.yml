@@ -17,7 +17,7 @@ jobs:
 
       - name: Install packages
         run: |
-          npm ci
+          yarn ci
 
       - name: Build
         run: |
@@ -27,5 +27,5 @@ jobs:
         # env:
         #   LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
         run: |
-          npm install -g @lhci/cli
+          yarn install -g @lhci/cli
           lhci autorun || echo "Fail to Run Lighthouse CI!"
