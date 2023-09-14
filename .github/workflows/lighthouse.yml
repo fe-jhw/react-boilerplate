@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       - name: Use Node.js 17.3.1
         uses: actions/setup-node@v1
@@ -19,13 +19,13 @@ jobs:
         run: |
           yarn ci
 
-      # - name: Build
-      #   run: |
-      #     yarn build
+      - name: Build
+        run: |
+          yarn build
 
-      # - name: Run Lighthouse CI
-      #   env:
-      #     LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-      #   run: |
-      #     yarn install -g @lhci/cli
-      #     lhci autorun || echo "Fail to Run Lighthouse CI!"
+      - name: Run Lighthouse CI
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+        run: |
+          yarn install -g @lhci/cli
+          lhci autorun || echo "Fail to Run Lighthouse CI!"
