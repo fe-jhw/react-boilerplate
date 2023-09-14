@@ -1,0 +1,38 @@
+name: 'test-every-push'
+
+on: push
+
+jobs:
+  test:
+    name: Test lint, tsc, build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ secrets.NODE_VERSION }}
+
+      # yarn 캐싱
+      - name: Cache .yarn
+        uses: actions/cache@v2
+        id: cache
+        with:
+          path: .yarn
+          key: yarn-packages-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn install
+
+      - run: yarn lint
+        # `if: ${{ always() }}` : 이전 단계에서 실패해도 실행된다
+        if: ${{ always() }}
+      - run: yarn test
+        if: ${{ always() }}
+      - run: yarn tsc
+        if: ${{ always() }}
+      - run: yarn build
+        if: ${{ always() }}
