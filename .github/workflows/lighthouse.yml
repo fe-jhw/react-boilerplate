@@ -1,7 +1,7 @@
 # 출처: 카카오 entertainment FE 기술블로그
 
 name: Run lighthouse CI When Push
-on: [push]
+on: push
 jobs:
   lhci:
     name: Lighthouse CI
@@ -24,8 +24,8 @@ jobs:
           yarn build
 
       - name: Run Lighthouse CI
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+        # env:
+        #   LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
         run: |
           npm install -g @lhci/cli
           lhci autorun || echo "Fail to Run Lighthouse CI!"
