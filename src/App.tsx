@@ -2,7 +2,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>테스트~</p>
+        <p>린트가 잘되나~~~</p>
       </header>
     </div>
   )
