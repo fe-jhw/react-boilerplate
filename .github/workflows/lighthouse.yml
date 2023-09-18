@@ -36,7 +36,7 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const lhciReport = require('./lhci_reports/manifest.json');
-            console.log(JSON.parse(lhciReport));
+            console.log(lhciReport, typeof lhciReport);
             
             core.setOutput('comments', '왜 안 돼');
 
