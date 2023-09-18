@@ -83,7 +83,7 @@
     "tsc": "tsc"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
+    "*.{js,jsx,ts,tsx}": [
       "eslint --cache --fix"
     ]
   },
