@@ -35,8 +35,8 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const fs = require('fs');
-            const results = JSON.parse(fs.readFileSync('/home/runner/work/react-boilerplate/react-boilerplate/lhci_reports/manifest.json'));
+            const lhciReport = require('./lhci_reports/manifest.json');
+            const results = JSON.parse(lhciReport);
             let comments = "";
 
             results.forEach((result) => {
