@@ -38,7 +38,7 @@ jobs:
             const results = require('./lhci_reports/manifest.json');
             let comments = "";
             
-            results.forEach((result) => {
+            results.forEach((result, idx) => {
               const { summary, jsonPath } = result;
 
               const formatResult = (res) => Math.round(res * 100);
@@ -47,7 +47,7 @@ jobs:
               );
               const score = (res) => (res >= 90 ? "🟢" : res >= 50 ? "🟠" : "🔴");
               const comment = [
-                `⚡️ Lighthouse report!`,
+                `⚡️ Lighthouse report #${idx+1}`,
                 `| Category | Score |`,
                 `| --- | --- |`,
                 `| ${score(summary.performance)} Performance | ${summary.performance} |`,
