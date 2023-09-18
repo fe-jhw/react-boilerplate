@@ -1,0 +1,67 @@
+[
+  {
+    "url": "http://localhost:63173/",
+    "isRepresentativeRun": false,
+    "htmlPath": "C:\\Users\\KTDS\\Desktop\\react_prac\\react-boilerplate\\lhci_reports\\_-2023_09_18_01_04_35-report.html",
+    "jsonPath": "C:\\Users\\KTDS\\Desktop\\react_prac\\react-boilerplate\\lhci_reports\\_-2023_09_18_01_04_35-report.json",
+    "summary": {
+      "performance": 0.77,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.91,
+      "pwa": 0.33
+    }
+  },
+  {
+    "url": "http://localhost:63173/",
+    "isRepresentativeRun": false,
+    "htmlPath": "C:\\Users\\KTDS\\Desktop\\react_prac\\react-boilerplate\\lhci_reports\\_-2023_09_18_01_05_00-report.html",
+    "jsonPath": "C:\\Users\\KTDS\\Desktop\\react_prac\\react-boilerplate\\lhci_reports\\_-2023_09_18_01_05_00-report.json",
+    "summary": {
+      "performance": 0.77,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.91,
+      "pwa": 0.33
+    }
+  },
+  {
+    "url": "http://localhost:63173/",
+    "isRepresentativeRun": false,
+    "htmlPath": "C:\\Users\\KTDS\\Desktop\\react_prac\\react-boilerplate\\lhci_reports\\_-2023_09_18_01_05_12-report.html",
+    "jsonPath": "C:\\Users\\KTDS\\Desktop\\react_prac\\react-boilerplate\\lhci_reports\\_-2023_09_18_01_05_12-report.json",
+    "summary": {
+      "performance": 0.77,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.91,
+      "pwa": 0.33
+    }
+  },
+  {
+    "url": "http://localhost:63173/",
+    "isRepresentativeRun": false,
+    "htmlPath": "C:\\Users\\KTDS\\Desktop\\react_prac\\react-boilerplate\\lhci_reports\\_-2023_09_18_01_05_25-report.html",
+    "jsonPath": "C:\\Users\\KTDS\\Desktop\\react_prac\\react-boilerplate\\lhci_reports\\_-2023_09_18_01_05_25-report.json",
+    "summary": {
+      "performance": 0.77,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.91,
+      "pwa": 0.33
+    }
+  },
+  {
+    "url": "http://localhost:63173/",
+    "isRepresentativeRun": true,
+    "htmlPath": "C:\\Users\\KTDS\\Desktop\\react_prac\\react-boilerplate\\lhci_reports\\_-2023_09_18_01_04_48-report.html",
+    "jsonPath": "C:\\Users\\KTDS\\Desktop\\react_prac\\react-boilerplate\\lhci_reports\\_-2023_09_18_01_04_48-report.json",
+    "summary": {
+      "performance": 0.77,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.91,
+      "pwa": 0.33
+    }
+  }
+]
