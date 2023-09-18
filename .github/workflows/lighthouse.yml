@@ -17,7 +17,7 @@ jobs:
 
       - name: Install packages
         run: |
-          yarn install && yarn install -g @lhci/cli
+          yarn install && npm install -g @lhci/cli
 
       - name: Build
         run: |
