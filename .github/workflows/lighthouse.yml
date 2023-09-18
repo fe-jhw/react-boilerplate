@@ -36,41 +36,9 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const lhciReport = require('./lhci_reports/manifest.json');
-            const results = JSON.parse(lhciReport);
-            let comments = "";
-
-            results.forEach((result) => {
-              const { summary, jsonPath } = result;
-              const { audits } = details;
-
-              const details = JSON.parse(fs.readFileSync(jsonPath));
-              const formatResult = (res) => Math.round(res * 100);
-
-              Object.keys(summary).forEach(
-                (key) => (summary[key] = formatResult(summary[key]))
-              );
-
-              const score = (res) => (res >= 90 ? "🟢" : res >= 50 ? "🟠" : "🔴");
-
-              const comment = [
-                `⚡️ Lighthouse report!`,
-                `| Category | Score |`,
-                `| --- | --- |`,
-                `| ${score(summary.performance)} Performance | ${summary.performance} |`,
-              ].join("\n");
-
-              const detail = [
-                `| Category | Score |`,
-                `| --- | --- |`,
-                `| ${score(
-                  audits["first-contentful-paint"].score * 100
-                )} First Contentful Paint | ${
-                  audits["first-contentful-paint"].displayValue
-                } |`,
-              ].join("\n");
-              comments += comment + "\n" + detail + "\n";
-            });
-            core.setOutput('comments', comments)
+            console.log(lhciReport);
+            
+            core.setOutput('comments', '왜 안 돼');
 
       - name: comment PR
         uses: unsplash/comment-on-pr@v1.3.0
