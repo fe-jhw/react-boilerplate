@@ -37,7 +37,6 @@ jobs:
           script: |
             const fs = require('fs');
             const results = JSON.parse(fs.readFileSync('/home/runner/work/react-boilerplate/react-boilerplate/lhci_reports/manifest.json'));
-            core.setOutput('comments', 'PR 댓글 테스트')
             let comments = "";
 
             results.forEach((result) => {
