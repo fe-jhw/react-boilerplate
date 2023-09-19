@@ -9,6 +9,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = merge(common, {
   mode: 'production',
@@ -68,9 +69,17 @@ module.exports = merge(common, {
       statsFilename: 'bundle-stats.json',
     }),
     new CleanWebpackPlugin(),
+    new CompressionPlugin({
+      deleteOriginalAssets: false,
+      algorithm: 'gzip',
+      test: /\.(js|css|html)$/,
+      threshold: 10240, // 압축을 적용할 파일 크기의 최소값 (10KB)
+      minRatio: 0.8, // 압축률이 80% 이상일 경우에만 압축을 적용
+    }),
   ],
 
   optimization: {
+    splitChunks: { chunks: 'all' },
     minimize: true,
     minimizer: [
       // 일단 CRA의 설정을 그대로 가져왔다.
@@ -84,6 +93,7 @@ module.exports = merge(common, {
             warnings: false,
             comparisons: false,
             inline: 2,
+            drop_console: true,
           },
           mangle: {
             safari10: true,

@@ -2,7 +2,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>린트가 잘되나~~~2</p>
+        <p>정현우의 react-boilerpalte</p>
       </header>
     </div>
   )
