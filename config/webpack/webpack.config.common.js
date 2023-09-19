@@ -10,10 +10,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|mjs|jsx|ts|tsx)$/,
-        loader: 'babel-loader',
+        test: /\.[jt]sx?$/,
+        loader: 'esbuild-loader',
         options: {
-          configFile: path.resolve(__dirname, '../babel/babel.config.js'),
+          // configFile: path.resolve(__dirname, '../babel/babel.config.js'),
+          target: 'es2015',
         },
       },
       {
@@ -27,7 +28,7 @@ module.exports = {
         test: /\.png$/,
         loader: 'url-loader',
         options: {
-          publicPath: './dist/',
+          publicPath: './build/',
           name: '[name].[ext]?[hash]',
           limit: 5000,
         },

@@ -10,6 +10,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
+const { EsbuildPlugin } = require('esbuild-loader')
 
 module.exports = merge(common, {
   mode: 'production',
@@ -51,7 +52,7 @@ module.exports = merge(common, {
 
   output: {
     filename: 'static/js/[name].[contenthash:8].js',
-    path: path.resolve(__dirname, '../../dist'),
+    path: path.resolve(__dirname, '../../build'),
     publicPath: './',
     chunkFilename: 'static/js/[name].[contenthash:8].chunk.js',
   },
@@ -78,37 +79,47 @@ module.exports = merge(common, {
     }),
   ],
 
+  // optimization: {
+  //   splitChunks: { chunks: 'all' },
+  //   minimize: true,
+  //   minimizer: [
+  //     // 일단 CRA의 설정을 그대로 가져왔다.
+  //     new TerserPlugin({
+  //       terserOptions: {
+  //         parse: {
+  //           ecma: 8,
+  //         },
+  //         compress: {
+  //           ecma: 5,
+  //           warnings: false,
+  //           comparisons: false,
+  //           inline: 2,
+  //           drop_console: true,
+  //         },
+  //         mangle: {
+  //           safari10: true,
+  //         },
+  //         keep_classnames: true,
+  //         keep_fnames: true,
+  //         output: {
+  //           ecma: 5,
+  //           comments: false,
+  //           ascii_only: true,
+  //         },
+  //       },
+  //     }),
+  //     new CssMinimizerPlugin({
+  //       parallel: os.cpus().length - 1,
+  //     }),
+  //   ],
+  // },
+
   optimization: {
-    splitChunks: { chunks: 'all' },
-    minimize: true,
     minimizer: [
-      // 일단 CRA의 설정을 그대로 가져왔다.
-      new TerserPlugin({
-        terserOptions: {
-          parse: {
-            ecma: 8,
-          },
-          compress: {
-            ecma: 5,
-            warnings: false,
-            comparisons: false,
-            inline: 2,
-            drop_console: true,
-          },
-          mangle: {
-            safari10: true,
-          },
-          keep_classnames: true,
-          keep_fnames: true,
-          output: {
-            ecma: 5,
-            comments: false,
-            ascii_only: true,
-          },
-        },
-      }),
-      new CssMinimizerPlugin({
-        parallel: os.cpus().length - 1,
+      new EsbuildPlugin({
+        target: 'es2015', // Syntax to transpile to (see options below for possible values)
+        css: true, // css or scss 사용시
+        // minify: true, // css in js 사용시
       }),
     ],
   },

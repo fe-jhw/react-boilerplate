@@ -13,7 +13,7 @@
 .editorconfig
 .eslintcache
 
-dist/*
-dist/bundle-report.html
-dist/bundle-stats.json
-dist/index.html
+build/*
+build/bundle-report.html
+build/bundle-stats.json
+build/index.html

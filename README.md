@@ -23,7 +23,7 @@
 
 ### `yarn build`
 
-`dist`폴더에 앱을 빌드합니다.
+`build`폴더에 앱을 빌드합니다.
 
 ### `yarn lint-staged`
 
