@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 
-if (process.env['USE_MSW'] === 'true') {
+if (process.env.NODE_ENV === 'development' && process.env['USE_MSW'] === 'true') {
   const { worker } = require('./mocks/browser')
   console.log('msw worker start!')
   worker.start()

@@ -9,6 +9,7 @@
 - behavior-driven-test: `react-testing-library`를 활용한 유저 행동 기반 UI 테스팅 환경이 구성되어 있습니다.
 - bundle-analyze: `webpack-bundle-analyzer`를 활용해 빌드시 번들 분석 정보를 확인할 수 있습니다.
 - lint-automation: 깃 훅을 사용하여 커밋 이전 자동으로 lint를 실행해 코드 품질을 향상시킵니다.
+- github-actions: 테스트, lighthouse, 배포 workflow들이 담겨 있습니다.
 
 ## 시작하기
 
@@ -34,10 +35,5 @@
 
 ## 앞으로 추가될 것들
 
-- TS 버전 업(현 4.4.2 -> 5?)
-- 초기 `git init`후 `pre-commit`훅 실행시키기
 
 ## 버그
-
-- 라이브러리 추가 or 새 파일 추가시 에디터 작업중 해당 파일 or 라이브러리 import시 자동완성이 안되는 경우가 종종 있음
-- root 경로에 한글 있을 경우 Cross-env 모듈 경로 인식 못함
